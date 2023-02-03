@@ -6,16 +6,23 @@ import { AppComponent } from './app.component';
 import { GestionarEnfermedadesComponent } from './gestionar-enfermedades/gestionar-enfermedades.component';
 import { GestionarEstudiantesComponent } from './gestionar-estudiantes/gestionar-estudiantes.component';
 import {MatButtonModule} from '@angular/material/button';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { GuardarEstudiantesComponent } from './gestionar-estudiantes/guardar-estudiantes/guardar-estudiantes.component';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
     GestionarEnfermedadesComponent,
-    GestionarEstudiantesComponent
+    GestionarEstudiantesComponent,
+    GuardarEstudiantesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule,
+    MatDialogModule,
+    //BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
